@@ -1,11 +1,24 @@
+body {
+	margin: 0px;
+}
+
 table {
-    border-collapse: collapse;
-    border-spacing: 1;
-    width: 100%;
-    border: 1px solid #ddd;
-    text-align: center;
+	background-color: gold;
+	border-collapse: collapse;
+	border-spacing: 1;
+	width: 100%;
+	border: 1px solid #ddd;
+	text-align: center;
 }
 
 .background_red {
-    background-color: #ff0000;
+	background-color: #ff0000;
+}
+
+#caption_table {
+	background-color: antiquewhite;
+}
+
+#option_name {
+	background-color: lime
 }
