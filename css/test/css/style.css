@@ -22,3 +22,19 @@ table {
 #option_name {
 	background-color: lime
 }
+
+li:not(:hover) {
+	background-color:azure
+}
+
+.form label::before{
+	content: "*"
+}
+
+.form label::after{
+	content: "："
+}
+
+[red-color] {
+	background-color: crimson;
+}

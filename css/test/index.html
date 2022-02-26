@@ -7,6 +7,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="./css/style.css">
 	<title>Test CSS</title>
+    <style>
+        table > td {
+            background-color: aqua;
+        }
+    </style>
 </head>
 
 <body>
@@ -60,8 +65,23 @@
 				<td>45677</td>
 			</tr>
 		</table>
+
+		<ul>
+			<li>item1</li>
+			<li>item2</li>
+			<li class="red">item3</li>
+			<li>item4</li>
+		</ul>
 	</section>
 
+	<form action="index.html" class="form">
+		<label for="name">输入姓名</label>
+		<input type="text" id="name" name="name">
+	</form>
+	<br><br><br>
+	<div red-color="true">
+		<span>I'm in a div</span>
+	</div>
 </body>
 
 </html>
