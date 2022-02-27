@@ -1,3 +1,7 @@
+* {
+	box-sizing: border-box;
+}
+
 body {
 	margin: 0px;
 }
@@ -38,3 +42,34 @@ li:not(:hover) {
 [red-color] {
 	background-color: crimson;
 }
+
+.percent-width {
+	width: 50%;
+	background-color: blanchedalmond;
+}
+
+.pixcel-width {
+	width: 200px;
+	background-color: cornflowerblue;
+}
+
+.view-width {
+	width: 20vw;
+	background-color: coral;
+}
+
+.one-rem {
+	font-size: 1rem;
+} 
+
+.one-em {
+	font-size: 1em;
+} 
+
+.two-rem {
+	font-size: 2rem;
+} 
+
+.two-em {
+	font-size: 2em;
+} 
