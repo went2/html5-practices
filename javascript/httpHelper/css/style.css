@@ -1,0 +1,75 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0px;
+}
+
+table {
+	background-color: gold;
+	border-collapse: collapse;
+	border-spacing: 1;
+	width: 100%;
+	border: 1px solid #ddd;
+	text-align: center;
+}
+
+.background_red {
+	background-color: #ff0000;
+}
+
+#caption_table {
+	background-color: antiquewhite;
+}
+
+#option_name {
+	background-color: lime
+}
+
+li:not(:hover) {
+	background-color:azure
+}
+
+.form label::before{
+	content: "*"
+}
+
+.form label::after{
+	content: "："
+}
+
+[red-color] {
+	background-color: crimson;
+}
+
+.percent-width {
+	width: 50%;
+	background-color: blanchedalmond;
+}
+
+.pixcel-width {
+	width: 200px;
+	background-color: cornflowerblue;
+}
+
+.view-width {
+	width: 20vw;
+	background-color: coral;
+}
+
+.one-rem {
+	font-size: 1rem;
+} 
+
+.one-em {
+	font-size: 1em;
+} 
+
+.two-rem {
+	font-size: 2rem;
+} 
+
+.two-em {
+	font-size: 2em;
+} 
