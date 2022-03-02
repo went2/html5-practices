@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Web Component Demo</title>
+	<style>
+		*, *:before, *:after {
+			box-sizing: border-box;
+		}
+		ywt-slide {
+			display: inline-block;
+			position: relative;
+			border-radius: 2px;
+		}
+		.box {
+			border: 2px solid deeppink;
+			width: 200px;
+			height: 200px;
+			background-color: lightpink;
+			display: block;
+			text-align: center;
+			padding-top: 20px;
+		}
+	</style>
+	
+</head>
+
+<body>
+
+	<ywt-slide></ywt-slide>
+
+
+	<script>
+
+		class Slide extends HTMLElement {
+			connectedCallback() {
+
+				this.initView();
+				this.initEvent();
+			}
+
+			initView() {
+				this.innerHTML = `<div class="box">嘿嘿<div><div class="thumb"></div>`;
+			}
+
+			initEvent() {
+				this.addEventListener('click', () => {
+					const list = ['别点啦', '讨厌！', '小鬼！', '哼~']
+					let rand = Math.round(Math.random()*3);
+					this.querySelector('.box').innerHTML = list[rand];
+				})
+			}
+
+		}
+
+
+		if (!customElements.get('ywt-slide')) {
+			customElements.define('ywt-slide', Slide)
+		}
+	</script>
+</body>
+
+</html>
