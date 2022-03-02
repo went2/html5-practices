@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="./css/c1.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Challenge</title>
+</head>
+<body>
+	<div id="container1" class="resizable">
+		
+	</div>
+
+	<script>
+		bindResize();
+
+		function bindResize() {
+			const el = document.getElementById('container1');
+			let els = el.style, x = y = 0;
+
+			el.addEventListener('mousemove', function(evt) {
+				if (el.offsetWidth - evt.offsetX <= 10) {
+					els.cursor = 'e-resize';
+				} else {
+					els.cursor = 'auto';
+				}
+			})
+			
+			el.addEventListener('mousedown', function(evt) {
+				// 点击位置与元素右边框的距离，不变值
+				x = el.offsetWidth - evt.offsetX
+				
+				// 在支持 setCapture 捕捉焦点, 设置事件
+				el.setCapture ? (
+					el.setCapture(), 
+					el.onmousemove = function (ev) { mouseMove(ev || event) },
+					el.onmouseup = mouseUp
+				) : ($(document).bind("mousemove", mouseMove).bind("mouseup", mouseUp))
+				
+				// 阻止默认事件
+				evt.preventDefault();
+			})
+
+			// 鼠标移动事件
+			function mouseMove(evt) {
+				els.width = evt.offsetX + x + 'px';
+				
+				// 如果鼠标移出元素或屏幕外
+				if (evt.offsetX <= 0 || evt.offsetX >= document.body.clientWidth + 2) {
+					mouseUp()
+				}
+			}
+			
+			// 释放焦点，移除事件
+			function mouseUp() {
+				el.releaseCapture ? (
+					el.releaseCapture(), el.onmousemove = el.onmouseup = null
+				) : ($(document).unbind("mousemove", mouseMove).unbind("mouseup", mouseUp))
+			}
+		}
+
+	</script>
+</body>
+</html>
