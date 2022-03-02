@@ -4,8 +4,25 @@
 
 .resizable {
 	background-color: antiquewhite;
-	border: 2px solid rgba(0, 0, 0, 0.5);
-	border-right: 7px solid rgba(0, 0, 0, 0.6);
+	border: 2px dashed rgba(0, 0, 0, 0.5);
+	border-right: 6px solid rgba(0, 0, 0, 0.6);
 	height: 400px;
   width: 500px;
+}
+
+.flexbox {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+
+.box {
+	background-color: lightpink;
+	border: 1px solid deeppink;
+	border-radius: 10px;
+	padding-top: 20px;
+	margin: 8px;
+	min-width: 120px;
+	text-align: center;
 }
