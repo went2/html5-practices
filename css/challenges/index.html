@@ -5,21 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="./css/c1.css">
+		<link rel="stylesheet" href="./css/background-style.css">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Challenge</title>
 </head>
 <body>
-	<div id="container1" class="resizable flexbox">
-		<div class="box">Box1</div>
-		<div class="box">Box2</div>
-		<div class="box">Box3</div>
+	<div class="background-style flex-container">
+		<div class="box-item">Box1</div>
+		<div class="box-item">Box2</div>
+		<div class="box-item">Box3</div>
+	</div>
+	<div class="background-style flex-container">
+		<div class="box-item">Box1</div>
+		<div class="box-item">Box2</div>
 	</div>
 
 	<script>
-		bindResize();
+		const resizeBoxList = ['container1', 'container2'];
+		return
+		resizeBoxList.forEach(id =>bindResize(id));
 
-		function bindResize() {
-			const el = document.getElementById('container1');
+		function bindResize(id) {
+			const el = document.getElementById(id);
 			let els = el.style, x = y = 0;
 
 			el.addEventListener('mousemove', function(evt) {

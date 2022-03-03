@@ -1,0 +1,10 @@
+
+.background-style {
+  background-color: antiquewhite;
+	border: 2px dashed rgba(0, 0, 0, 0.5);
+	height: 400px;
+	margin-top: 2rem;
+  overflow: auto;
+  resize: both;
+  width: 500px;
+}
