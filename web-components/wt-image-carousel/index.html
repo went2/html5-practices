@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Carousel Component</title>
+  <script>
+    class ImageCarousel extends HTMLElement {
+
+      constructor() {
+        // shadow DOM 创建时调用
+        // 用于设置 listeners 及初始化组件状态, 不要在这里做 render 及 fectch 数据的操作
+        super();
+      }
+
+      // 元素插入到 DOM 中后调用，该方法内可以才使用 DOM API
+      // 做 render 及 fectch 数据的操作
+      connectedCallback() {
+        this.initView();
+      }
+
+      static get observedAttributes() {
+        return ['title', 'author', 'image-url'];
+      }
+
+      // 属性变化时调用, 可以在这里更新组件状态
+      attributeChangedCallback(name, oldValue, newValue) {
+        console.log(`${name} changed from ${oldValue} to ${newValue}`);
+      }
+
+      // 元素从 DOM 中移除时调用, 可以在这里做一些清理工作
+      disconnectedCallback() {}
+
+      initView() {}
+    }
+
+    // 创建自定义组件
+    if(!customElements.get('wt-image-carousel')) {
+      customElements.define('wt-image-carousel', ImageCarousel)
+    }
+  </script>
+</head>
+<body>
+    <wt-image-carousel
+      title="All about Cat"
+      author="tommy"
+      image-url="./images/cat.jpg, ./images/cat2.jpg, ./images/cat3.jpg"
+    >
+    </wt-image-carousel>
+</body>
+</html>
