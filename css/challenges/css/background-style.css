@@ -1,8 +1,14 @@
 
+.text-format {
+  font-size: 1.4rem;
+  padding: 1.2rem;
+  text-align: center;
+}
+
 .background-style {
   background-color: antiquewhite;
 	border: 2px dashed rgba(0, 0, 0, 0.5);
-	height: 400px;
+	height: 300px;
 	margin-top: 2rem;
   overflow: auto;
   resize: both;

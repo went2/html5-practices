@@ -6,7 +6,6 @@
 	background-color: antiquewhite;
 	border: 2px dashed rgba(0, 0, 0, 0.5);
 	border-right: 6px solid rgba(0, 0, 0, 0.6);
-	height: 400px;
 	margin: 10px;
   width: 500px;
 }
@@ -21,8 +20,22 @@
 	background-color: lightpink;
 	border: 1px solid deeppink;
 	border-radius: 10px;
+	/* flex-grow flex-shrink flex-basis  */
+	flex: 0 0 120px;
 	padding-top: 20px;
-	margin: 8px;
-	min-width: 120px;
-	text-align: center;
+	margin: 6px;
+}
+
+.container2 {
+	display: grid;
+	grid-template-columns: minmax(150px, 25%) 1fr;
+}
+
+.sidebar {
+	background-color: khaki;
+	/* border: 1px dashed rgba(0, 0, 0, 0.5); */
+}
+
+.content2 {
+	background-color: aquamarine;
 }
