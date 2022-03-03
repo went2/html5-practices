@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style/style.css">
   <title>Image Carousel Component</title>
   <script>
     class ImageCarousel extends HTMLElement {
@@ -17,7 +18,11 @@
       // 元素插入到 DOM 中后调用，该方法内可以才使用 DOM API
       // 做 render 及 fectch 数据的操作
       connectedCallback() {
+        this._imageIndex = 0;
+        this._imageUrls = this.getAttribute('image-url').split(',');
         this.initView();
+
+        this.showImage();
       }
 
       static get observedAttributes() {
@@ -32,7 +37,26 @@
       // 元素从 DOM 中移除时调用, 可以在这里做一些清理工作
       disconnectedCallback() {}
 
-      initView() {}
+      initView() {
+        this.innerHTML = `
+          <div class="image-carousel">
+            <div class="image-carousel-info">
+              <h2>${this.getAttribute('title')}</h2>
+              <h3>${this.getAttribute('author')}</h3>
+            </div>
+            <div class="image-carousel-container">
+              <img src="" alt="">
+            </div>
+            <button class="back"><</button>
+            <button class="next">></button>
+          </div>
+        `;
+      }
+      
+      showImage() {
+        this.querySelector('.image-carousel-container img').src = this._imageUrls[this._imageIndex];
+      }
+    
     }
 
     // 创建自定义组件
@@ -44,7 +68,7 @@
 <body>
     <wt-image-carousel
       title="All about Cat"
-      author="tommy"
+      author="Tommy"
       image-url="./images/cat.jpg, ./images/cat2.jpg, ./images/cat3.jpg"
     >
     </wt-image-carousel>
