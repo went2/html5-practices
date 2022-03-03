@@ -69,6 +69,7 @@ h1,h2,h3,h4,h5,h6 {
 .left-side {
 	background-color: lightblue;
 	flex-grow: 0;
+	min-width: 100px;
 }
 
 .main-content {
@@ -79,6 +80,7 @@ h1,h2,h3,h4,h5,h6 {
 .right-side {
 	background-color: lightyellow;
 	flex-grow: 0;
+	min-width: 100px;
 }
 
 .footer {
@@ -86,4 +88,34 @@ h1,h2,h3,h4,h5,h6 {
 	border: 1px dashed rgba(0, 0, 0, 0.5);
 	flex-grow: 0;
 	height: 100px;
+}
+
+.container4 {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	height: 100%;
+}
+
+.card-wrapper {
+	background-color: lightyellow;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 10px;
+}
+
+.card-title {
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+.card-info {
+	margin: 10px 0px 10px 0px;
+	min-height: 220px;
+}
+
+.image-container {
+	background-color: cornflowerblue;
+	min-width: 120px;
+	min-height: 100px;
 }
