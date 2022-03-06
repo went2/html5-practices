@@ -2,3 +2,36 @@
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
 }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.header_left {
+  display: flex;
+  align-items: center;
+}
+
+.header_menu {
+  margin: 0 16px 0 16px;
+}
+
+.youtube-logo {
+  margin-left: 16px;
+}
+
+.menu-icons {
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 1.5rem;
+}
+
+.menu-channel-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
