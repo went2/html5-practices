@@ -119,16 +119,42 @@ body {
 }
 
 /* video css */
+
 .video {
-  /* display: grid; */
   position: fixed;
   width: calc(100vw-80);
   left: 80px;
 }
 
+.video-section {
+  display: flex;
+  justify-content: space-between;
+	flex-wrap: wrap;
+}
+
 .video-container {
   display: flex;
   flex-direction: column;
+  margin: 1rem 1rem;
+}
+
+.thumbnail {
+  display: flex;
+  position: relative;
+}
+
+.thumbnail::before {
+  background-color: #333;
+  bottom: 5px;
+  border-radius: 0.15rem;
+  content: attr(data-duration);
+  color: #f8f8f8;
+  font-size: 0.6rem;
+  font-weight: 500;
+  padding: 0.1rem 0.3rem;
+  position: absolute;
+  right: 5px;
+  text-decoration: none;
 }
 
 .thumbnail-image {
