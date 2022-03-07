@@ -161,15 +161,23 @@ body {
 }
 
 .video-channel-name {
-  color: #606060;
+  /* color: #606060; */
   font-size: 0.6rem;
   margin-top: 0.5rem;
   text-decoration: none;
+  transition: color 0.6s;
+}
+
+.video-channel-name:hover {
+  color: #030303;
 }
 
 .video-metadata {
-  color: #606060;
   font-size: 0.6rem;
   margin-top: 0.2rem;
   text-decoration: none;
+}
+
+.video-channel-name, .video-metadata {
+  color: #606060;
 }
