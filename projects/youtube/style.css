@@ -81,11 +81,12 @@ body {
   margin: 0 1.5rem;
 }
 
-/* mainbody css includes sidebar and videocontent */
+/* sidebar css */
 .mainbody {
   display: flex;
   position: relative;
-  height: 100vh;
+  height: calc(100vh - 67px);
+  top: 67px;
 }
 
 .sidebar {
@@ -113,10 +114,62 @@ body {
   padding: 1rem 1rem;
 }
 
-/* .sidebar-category.active {
-
-} */
-
 .sidebar-font {
   margin-top: 2px;
+}
+
+/* video css */
+.video {
+  /* display: grid; */
+  position: fixed;
+  width: calc(100vw-80);
+  left: 80px;
+}
+
+.video-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.thumbnail-image {
+  width: 100%;
+  height: 100%;
+}
+
+.video-description {
+  display: flex;
+  margin-top: 0.8rem;
+}
+
+.channel-icon-image {
+  border-radius: 50%;
+  height: 36px;
+  margin-right: 1rem;
+  width: 36px;
+}
+
+.video-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.video-title {
+  color: #030303;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.video-channel-name {
+  color: #606060;
+  font-size: 0.6rem;
+  margin-top: 0.5rem;
+  text-decoration: none;
+}
+
+.video-metadata {
+  color: #606060;
+  font-size: 0.6rem;
+  margin-top: 0.2rem;
+  text-decoration: none;
 }
