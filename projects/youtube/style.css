@@ -9,6 +9,7 @@ body {
 
 .header {
   align-items: center;
+  background-color: #fff;
   display: flex;
   justify-content: space-between;
   padding: 0.8rem;
@@ -85,8 +86,8 @@ body {
 .mainbody {
   display: flex;
   position: relative;
-  height: calc(100vh - 67px);
-  top: 67px;
+  height: calc(100% - 66px);
+  top: 66px;
 }
 
 .sidebar {
@@ -121,15 +122,23 @@ body {
 /* video css */
 
 .video {
-  position: fixed;
-  width: calc(100vw-80);
   left: 80px;
+  position: relative;
+  width: calc(100vw - 100px);
+  margin-top: 1rem;
 }
 
 .video-section {
-  display: flex;
-  justify-content: space-between;
-	flex-wrap: wrap;
+  background-color: #f9f9f9;
+  border-top: 1px solid #e5e5e5;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  padding: 1rem 0;
+}
+
+.video-section:first-child {
+  border-top: none;
 }
 
 .video-container {
@@ -206,4 +215,19 @@ body {
 
 .video-channel-name, .video-metadata {
   color: #606060;
+}
+
+.video-section-recommendation {
+  align-items: center;
+  display: flex;
+  grid-column: 1 / -1;
+  justify-content: space-between;
+  margin: 0.8rem 0;
+  padding: 0 1rem;
+}
+
+.video-section-recommendation-close {
+  text-decoration: none;
+  color: #606060;
+  font-size: 1.7rem;
 }
