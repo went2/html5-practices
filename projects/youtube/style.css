@@ -171,11 +171,13 @@ body {
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  padding: 60px 0;
+  padding: 1rem 0;
 }
 
-.video-section:first-child {
+/* 该选择器所在复原度的第2个子元素 */
+.video-section:nth-child(2) {
   border-top: none;
+  padding: 60px 0;
 }
 
 .video-container {
