@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -23,18 +25,34 @@ body {
   background-position: center;
   width: 100vw;
   height: 100vh;
+
+  animation: blink 2s alternate infinite;
+}
+
+@keyframes blink {
+  100% {
+    opacity: 20%;
+  }
 }
 
 .sun {
-  background-image: radial-gradient(#FFF57B, #FA8607);
+  background-image: radial-gradient(#fff57b, #fa8607);
   width: var(--sun-width);
   height: var(--sun-height);
   border-radius: 50%;
-  box-shadow: 0 0 100px #FCB033;
+  box-shadow: 0 0 30px #fcb033;
 
   position: absolute;
   left: calc(100vw / 2 - var(--sun-width) / 2);
   top: calc(100vh / 2 - var(--sun-height) / 2);
+
+  animation: shining 3s alternate infinite;
+}
+
+@keyframes shining {
+  100% {
+    box-shadow: 0 0 100px #fcb033;
+  }
 }
 
 .earth_orbit {
@@ -47,32 +65,20 @@ body {
   left: calc(100vw / 2 - 85vh / 2);
   top: calc(100vh / 2 - 85vh / 2);
 
-  animation-duration: 9.9s;
-  animation-name: earth-circle;
+  animation-duration: 20s;
+  animation-name: circle;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
 
-@keyframes earth-circle {
-  25% {
-    transform: rotate(90deg);
-  }
-
-  50% {
-    transform: rotate(180deg);
-  }
-
-  75% {
-    transform: rotate(270deg);
-  }
-
+@keyframes circle {
   100% {
     transform: rotate(360deg);
   }
 }
 
 .moon_orbit {
-  border: 1px dashed gold;
+  /* border: 1px dashed gold; */
   border-radius: 50%;
   width: 120px;
   height: 120px;
@@ -85,33 +91,29 @@ body {
   left: calc(-120px / 2);
   top: calc(50% / 2 - -120px / 2);
 
-  animation-duration: 5s;
-  animation-name: moon-circle;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+  animation: circle 20s linear infinite;
 }
 
-@keyframes moosn-circle {
-  25% {
-    transform: rotate(90deg);
-  }
-
-  50% {
-    transform: rotate(180deg);
-  }
-
-  75% {
-    transform: rotate(270deg);
-  }
-
+@keyframes moon-circle {
   100% {
     transform: rotate(360deg);
   }
 }
 
+.earth {
+  
+}
+
 .earth img {
   width: 80px;
   border-radius: 50%;
+  animation: circle-reverse 20s linear infinite;
+}
+
+@keyframes circle-reverse {
+  100% {
+    transform: rotate(-720deg);
+  }
 }
 
 .moon {
