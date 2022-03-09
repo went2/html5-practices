@@ -38,14 +38,37 @@ body {
 }
 
 .earth_orbit {
-  border: 2px dashed gold;
+  /* border: 2px dashed gold; */
   border-radius: 50%;
-  width: 90vh;
-  height: 90vh;
+  width: 85vh;
+  height: 85vh;
 
   position: absolute;
-  left: calc(100vw / 2 - 90vh / 2);
-  top: calc(100vh / 2 - 90vh / 2);
+  left: calc(100vw / 2 - 85vh / 2);
+  top: calc(100vh / 2 - 85vh / 2);
+
+  animation-duration: 9.9s;
+  animation-name: earth-circle;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes earth-circle {
+  25% {
+    transform: rotate(90deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  75% {
+    transform: rotate(270deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .moon_orbit {
@@ -61,10 +84,29 @@ body {
   position: absolute;
   left: calc(-120px / 2);
   top: calc(50% / 2 - -120px / 2);
+
+  animation-duration: 5s;
+  animation-name: moon-circle;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
-.earth {
-  /* border: 1px dashed gold; */
+@keyframes moosn-circle {
+  25% {
+    transform: rotate(90deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  75% {
+    transform: rotate(270deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .earth img {
