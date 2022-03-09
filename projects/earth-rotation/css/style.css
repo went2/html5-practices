@@ -1,0 +1,83 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --sun-width: 100px;
+  --sun-height: 100px;
+}
+
+body {
+  margin: 0;
+}
+
+.universe {
+  background-image: radial-gradient(#555, #000);
+  width: 100vw;
+  height: 100vh;
+}
+
+.stars {
+  background-image: url("../images/stars.png");
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.sun {
+  background-image: radial-gradient(#FFF57B, #FA8607);
+  width: var(--sun-width);
+  height: var(--sun-height);
+  border-radius: 50%;
+  box-shadow: 0 0 100px #FCB033;
+
+  position: absolute;
+  left: calc(100vw / 2 - var(--sun-width) / 2);
+  top: calc(100vh / 2 - var(--sun-height) / 2);
+}
+
+.earth_orbit {
+  border: 2px dashed gold;
+  border-radius: 50%;
+  width: 90vh;
+  height: 90vh;
+
+  position: absolute;
+  left: calc(100vw / 2 - 90vh / 2);
+  top: calc(100vh / 2 - 90vh / 2);
+}
+
+.moon_orbit {
+  border: 1px dashed gold;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  left: calc(-120px / 2);
+  top: calc(50% / 2 - -120px / 2);
+}
+
+.earth {
+  /* border: 1px dashed gold; */
+}
+
+.earth img {
+  width: 80px;
+  border-radius: 50%;
+}
+
+.moon {
+  width: 30px;
+  height: 30px;
+  background-image: radial-gradient(#ddd, #888);
+  border-radius: 50%;
+
+  position: absolute;
+  left: calc(-30px / 2);
+}
