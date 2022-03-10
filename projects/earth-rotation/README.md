@@ -2,13 +2,13 @@
 
 实现一个地球绕太阳转的动画效果，如图：
 
-![earth-roration-effect](C:\Users\littl\Desktop\html5 practices\projects\earth-rotation\images\earth-roration-effect.gif)
+![earth-roration-effect](./images/earth-roration-effect.gif)
 
 ### 实现思路
 
 如下图：
 
-![earth-roration-explanation](C:\Users\littl\Desktop\html5 practices\projects\earth-rotation\images\earth-roration-explanation.gif)
+![earth-roration-explanation](./images/earth-roration-explanation.gif)
 
 把地球放到一个地球轨道容器的边上，然后让轨道容器绕中心旋转。
 
