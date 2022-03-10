@@ -48,10 +48,6 @@ body {
   display: grid;
   place-items: center;
 
-  /* position: absolute;
-  left: calc(100vw / 2 - 85vh / 2);
-  top: calc(100vh / 2 - 85vh / 2); */
-
   animation: circle 20s linear infinite;
 }
 
