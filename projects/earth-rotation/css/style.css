@@ -11,27 +11,53 @@
 
 body {
   margin: 0;
+  overflow: hidden;
 }
 
 .universe {
   background-image: radial-gradient(#555, #000);
-  width: 100vw;
   height: 100vh;
+
+  display: grid;
+  place-items: center;
 }
 
 .stars {
+  position: absolute;
   background-image: url("../images/stars.png");
   background-size: cover;
   background-position: center;
   width: 100vw;
   height: 100vh;
 
-  animation: blink 2s alternate infinite;
+  animation: blink 2s infinite alternate;
 }
 
 @keyframes blink {
   100% {
     opacity: 20%;
+  }
+}
+
+.earth_orbit {
+  border: 2px dashed gold;
+  border-radius: 50%;
+  width: 85vh;
+  height: 85vh;
+
+  display: grid;
+  place-items: center;
+
+  /* position: absolute;
+  left: calc(100vw / 2 - 85vh / 2);
+  top: calc(100vh / 2 - 85vh / 2); */
+
+  animation: circle 20s linear infinite;
+}
+
+@keyframes circle {
+  100% {
+    transform: rotate(360deg);
   }
 }
 
@@ -42,9 +68,7 @@ body {
   border-radius: 50%;
   box-shadow: 0 0 30px #fcb033;
 
-  position: absolute;
-  left: calc(100vw / 2 - var(--sun-width) / 2);
-  top: calc(100vh / 2 - var(--sun-height) / 2);
+  /* position: absolute; */
 
   animation: shining 3s alternate infinite;
 }
@@ -55,30 +79,8 @@ body {
   }
 }
 
-.earth_orbit {
-  /* border: 2px dashed gold; */
-  border-radius: 50%;
-  width: 85vh;
-  height: 85vh;
-
-  position: absolute;
-  left: calc(100vw / 2 - 85vh / 2);
-  top: calc(100vh / 2 - 85vh / 2);
-
-  animation-duration: 20s;
-  animation-name: circle;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
-
-@keyframes circle {
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 .moon_orbit {
-  /* border: 1px dashed gold; */
+  border: 1px dashed gold;
   border-radius: 50%;
   width: 120px;
   height: 120px;
@@ -87,21 +89,14 @@ body {
   align-items: center;
   justify-content: center;
 
+  /* display: grid;
+  place-items: center; */
+
   position: absolute;
-  left: calc(-120px / 2);
-  top: calc(50% / 2 - -120px / 2);
+  left: calc(50% - 85vh / 2 - 60px);
+  top: calc(50% - 120px / 2);
 
   animation: circle 20s linear infinite;
-}
-
-@keyframes moon-circle {
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.earth {
-  
 }
 
 .earth img {
