@@ -1,4 +1,64 @@
+/* ===Base=== */
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Martel Sans', sans-serif;
+  margin: 0;
+}
+
+.a-undec {
+  text-decoration: none;
+  color: rgb(0,0,0,0.8)
+}
+
+/* Header */
+.header-container {
+  font-size: 0.8rem;
+  font-weight: 400;
+  padding: 0.1rem 1.2rem;
+  border: 1px solid #eee;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-header {
+  display: flex;
+  align-items: center;
+}
+
+.left-header-helper {
+  margin-left: 1rem;
+}
+
+.left-header-helper a {
+  padding: 0.3rem 0.4rem;
+}
+
+.right-header {
+  display: flex;
+  align-items: center;
+}
+
+.right-header-helper a {
+  padding: 0.3rem 0.4rem;
+}
+
+.right-header-shopping {
+  /* align-items: center;
+  text-align: center; */
+}
+
+.bx-chevron-down {
+  font-size: 1.4rem;
+}
+
+.right-header-icons {
+  font-size: 1.4rem;
+}
+
+.right-header-icons i {
+  margin: 0 0.8rem;
+}
