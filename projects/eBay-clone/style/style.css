@@ -242,3 +242,25 @@ nav.search-bar .search-form a {
   color: #767676;
   font-size: 0.75rem;
 }
+
+@media screen and (max-width: 978px){
+  nav.search-bar .search-form {
+    grid-template-columns: minmax(270px, auto) 170px 170px;
+  }
+
+  nav.search-bar .search-form a {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 875px){
+  nav.search-bar .search-form {
+    grid-template-columns: minmax(270px, auto) 170px 70px;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  nav.search-bar .shop-category {
+    display: none;
+  }
+}
