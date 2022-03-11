@@ -150,3 +150,58 @@ nav.search-bar .search-form {
   flex-grow: 1;
   grid-template-columns: minmax(270px, auto) 170px 170px 70px;
 }
+
+nav.search-bar .input-placeholder {
+  position: relative;
+}
+
+nav.search-bar .input-placeholder input {
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.6rem 2.5rem;
+
+  border: 2px solid black;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right: none;
+}
+
+nav.search-bar .input-placeholder input:focus {
+  outline: none;
+}
+
+nav.search-bar .input-placeholder input:focus + .placeholder i {
+  color: black;
+}
+
+nav.search-bar .input-placeholder input:focus + .placeholder span {
+  color: transparent;
+}
+
+nav.search-bar .input-placeholder input:not(:focus) + .placeholder span {
+  color: #767676;
+  transition: .2s ease-in;
+}
+
+nav.search-bar .input-placeholder .placeholder {
+  position: absolute;
+  top: 0.5rem;
+  left: 1rem;
+
+  color: #767676;
+  font-size: 0.9rem;
+
+  display: flex;
+  align-items: center;
+  column-gap: 0.6rem;
+  pointer-events: none;
+}
+
+nav.search-bar .input-placeholder .placeholder i {
+  font-size: 1.3rem;
+}
+
+nav.search-bar .search-categories {
+  border: 2px solid black;
+  border-left: 1px solid #555;
+}
