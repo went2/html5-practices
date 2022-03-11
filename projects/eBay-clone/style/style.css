@@ -136,6 +136,10 @@ nav.search-bar .shop-category {
   align-items: center;
 }
 
+nav.search-bar .shop-category i {
+  font-size: 1.4rem;
+}
+
 nav.search-bar .category-txt {
   font-size: 0.8rem;
   color: #555;
@@ -201,7 +205,40 @@ nav.search-bar .input-placeholder .placeholder i {
   font-size: 1.3rem;
 }
 
+nav.search-bar .search-categories-container {
+  position: relative;
+}
+
+nav.search-bar .search-categories-container i {
+  position: absolute;
+  top: 0.75rem;
+  right: 1.1rem;
+  color: #767676;
+}
+
 nav.search-bar .search-categories {
+  height: 100%;
+  width: 100%;
   border: 2px solid black;
-  border-left: 1px solid #555;
+  border-left: 1px solid #c7c7c7;
+  border-radius: 0;
+  color: #333;
+
+  padding: 0 1rem;
+  appearance:none;
+}
+
+nav.search-bar .search-btn {
+  margin-left: 0.3rem;
+  background-color: #3665f3;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+nav.search-bar .search-form a {
+  padding: 0 0.5rem;
+  margin: auto 0;
+  color: #767676;
+  font-size: 0.75rem;
 }
