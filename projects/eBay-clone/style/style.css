@@ -16,7 +16,7 @@ a {
 /* Header */
 .header-container {
   height: 30px;
-  width: 1312px;
+  max-width: 1312px;
   padding: 0.1rem 1.2rem;
   border: 1px solid #eee;
   border-left: none;
@@ -37,8 +37,13 @@ a {
 .left-header {
   display: flex;
   align-items: center;
-
+  flex-shrink: 0;
   /* width: 400px; */
+}
+
+.sign-or-reg a {
+  color: #0654ba;
+  text-decoration: underline;
 }
 
 .left-header-helper {
@@ -53,8 +58,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  width: 370px;
+  width: 350px;
 }
 
 .drop-down-menu {
@@ -69,4 +73,34 @@ a {
 .right-header>a {
   display: flex;
   align-items: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .right-header {
+    width: 220px;
+    flex-shrink: 0;
+  }
+
+  .right-header>div:first-of-type {
+    display: none;
+  }
+
+  .left-header-helper>a:nth-child(2) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .sign-or-reg>a:last-of-type {
+    display: none;
+  }
+  .sign-or-reg>span:last-of-type {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .left-header-helper {
+    display: none;
+  }
 }
