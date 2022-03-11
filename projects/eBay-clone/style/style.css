@@ -107,3 +107,46 @@ a {
 section.main-body, footer {
   border: 1px solid #eee;
 }
+
+section .search-bar {
+  max-width: 1312px;
+  height: 60px;
+  margin: 0 auto;
+  padding: 0 0 4rem 0;
+}
+
+.nav-ul {
+  display: flex;
+  column-gap: 0.5rem;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.ebay-logo img {
+  width: 117px;
+}
+
+nav.search-bar .shop-category {
+  width: 80px;
+  height: 43px;
+  line-height: 1rem;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+}
+
+nav.search-bar .category-txt {
+  font-size: 0.8rem;
+  color: #555;
+}
+
+nav.search-bar .category-txt:hover {
+  color: #0654ba;
+}
+
+nav.search-bar .search-form {
+  display: grid;
+  flex-grow: 1;
+  grid-template-columns: minmax(270px, auto) 170px 170px 70px;
+}
