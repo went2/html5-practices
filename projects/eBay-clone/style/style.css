@@ -18,7 +18,6 @@ a {
   height: 30px;
   max-width: 1312px;
   padding: 0.1rem 1.2rem;
-  border: 1px solid #eee;
   border-left: none;
   border-right: none;
   margin: 0 auto;
@@ -103,4 +102,8 @@ a {
   .left-header-helper {
     display: none;
   }
+}
+
+section.main-body, footer {
+  border: 1px solid #eee;
 }
