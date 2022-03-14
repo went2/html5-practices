@@ -229,6 +229,7 @@ nav.search-bar .search-categories {
 
   padding: 0 1rem;
   appearance:none;
+  font-size: 0.8rem;
 }
 
 nav.search-bar .search-btn {
@@ -237,6 +238,14 @@ nav.search-bar .search-btn {
   color: white;
   border: none;
   cursor: pointer;
+}
+
+nav.search-bar .search-btn i {
+  font-size: 1.8rem;
+}
+
+nav.search-bar .search-btn span {
+  font-size: 0.9rem;
 }
 
 nav.search-bar .search-form a {
@@ -264,6 +273,16 @@ nav.search-bar .search-form a {
 
 @media screen and (max-width: 780px) {
   nav.search-bar .shop-category {
+    display: none;
+  }
+
+  nav.search-bar .search-btn span {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 781px) {
+  nav.search-bar .search-btn i {
     display: none;
   }
 }
