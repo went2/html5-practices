@@ -212,8 +212,11 @@ nav.search-bar .search-categories-container {
 nav.search-bar .search-categories-container i {
   position: absolute;
   top: 0.75rem;
-  right: 1.1rem;
+  right: 0.75rem;
   color: #767676;
+
+  /* 让 icon 不接受点击事件 */
+  pointer-events: none;
 }
 
 nav.search-bar .search-categories {
@@ -222,7 +225,7 @@ nav.search-bar .search-categories {
   border: 2px solid black;
   border-left: 1px solid #c7c7c7;
   border-radius: 0;
-  color: #333;
+  color: #767676;
 
   padding: 0 1rem;
   appearance:none;
