@@ -286,3 +286,58 @@ nav.search-bar .search-form a {
     display: none;
   }
 }
+
+section.main-body .nav-container {
+  width: 1312px;
+  height: 33px;
+  border-top: 1px solid #ddd;
+
+  margin: 0 auto;
+  padding: 0 7rem;
+}
+
+section.main-body .nav-container .center-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+section.main-body .nav-container .center-nav .item a,
+section.main-body .nav-container .center-nav .item i {
+  font-size: 0.75rem;
+  color: #555;
+}
+
+section.main-body .nav-container .center-nav .item a:hover {
+  color: #0654BA;
+  text-decoration: none;
+  /* border-bottom: 2px solid #0654BA; */
+}
+
+section.main-body .nav-container .item a.active {
+  /* border-bottom: 2px solid black; */
+  font-weight: 700;
+}
+
+section.main-body .nav-container .item {
+  position: relative;
+}
+
+section.main-body .nav-container .item a.active::before {
+  content: "";
+  height: 2px;
+  width: 38px;
+  background-color: black;
+
+  position: absolute;
+  bottom: -0.1rem;
+}
+
+section.main-body .nav-container .center-nav .item-13 {
+  display: none;
+}
+
+section.main-body .nav-container .center-nav .item-13 a {
+  display: flex;
+  align-items: center;
+}
