@@ -631,3 +631,10 @@ section.collections .list-container .detail-3 a {
 section.collections .list-container .detail-3 a:hover {
   text-decoration: underline;
 }
+
+@media screen and (max-width: 1200px) {
+  section.collections .ad-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
