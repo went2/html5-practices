@@ -638,3 +638,31 @@ section.collections .list-container .detail-3 a:hover {
     justify-content: center;
   }
 }
+
+section.card {
+  max-width: 1312px;
+  margin: 0 auto;
+}
+
+section.card .title {
+  display: flex;
+  align-items: center;
+}
+
+section.card .title h2 {
+  font-weight: 200;
+  color: #555;
+}
+
+section.card .title span {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  margin-left: 2rem;
+
+  cursor: pointer;
+}
+
+section.card .title span i {
+  font-size-adjust: 1.5rem;
+}
