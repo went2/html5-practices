@@ -3,6 +3,11 @@
   box-sizing: border-box;
 }
 
+:root {
+  --card-pic-width: 150px;
+  --card-pic-height: var(--card-pic-width);
+}
+
 body {
   font-family: 'Martel Sans', sans-serif;
   margin: 0;
@@ -642,6 +647,7 @@ section.collections .list-container .detail-3 a:hover {
 section.card {
   max-width: 1312px;
   margin: 0 auto;
+  align-items: center;
 }
 
 section.card .title {
@@ -665,4 +671,66 @@ section.card .title span {
 
 section.card .title span i {
   font-size-adjust: 1.5rem;
+}
+
+section.card .container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+
+}
+
+section.card .container a {
+  display: flex;
+  flex-direction: column;
+}
+
+section.card .container .card-pic {
+  width: var(--card-pic-width);
+  height: var(--card-pic-height);
+  border-radius: 50%;
+
+  background-size: cover;
+  transition: .5s;
+}
+
+section.card .container .card-title {
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+section.card .container .card-item-1 .card-pic {
+  background-image: url("../images/098-1.png");
+}
+
+section.card .container .card-item-2 .card-pic {
+  background-image: url("../images/098-2.png");
+}
+
+section.card .container .card-item-3 .card-pic {
+  background-image: url("../images/098-3.png");
+}
+
+section.card .container .card-item-4 .card-pic {
+  background-image: url("../images/098-4.png");
+}
+
+section.card .container .card-item-5 .card-pic {
+  background-image: url("../images/098-5.png");
+}
+
+section.card .container .card-item-6 .card-pic {
+  background-image: url("../images/098-6.png");
+}
+
+section.card .container .card-item-7 .card-pic {
+  background-image: url("../images/098-7.png");
+}
+
+/* 父容器 hover 时，子元素产生动画效果的实现 */
+section.card .card-item:hover > .card-pic {
+  box-shadow: 0 0 2px black;
+}
+
+section.card .card-item:hover > .card-title {
+  text-decoration: underline;
 }
