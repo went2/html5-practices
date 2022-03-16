@@ -410,7 +410,7 @@ section.main-body .nav-container .center-nav .item-13 a {
 }
 
 section.main-body .banner {
-  width: 1312px;
+  max-width: 1312px;
   height: 400px;
   margin: 0 auto;
 
@@ -461,7 +461,7 @@ section.main-body .banner .child-3 {
 
 @media screen and (max-width: 1312px) {
   section.main-body .banner {
-    padding: 0 30px;
+    padding: 0 50px;
   }
 }
 
@@ -484,3 +484,102 @@ section.main-body .banner .child-3 {
   }
 }
 
+section.collections {
+  max-width: 1312px;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+
+section.collections > h2 {
+  font-weight: 200;
+  color: #555;
+}
+
+section.collections .ad-container {
+  border-top: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-column-gap: 45px;
+}
+
+section.collections .left-ad,
+section.collections .right-ad {
+  width: 585px;
+  height: 600px;
+  margin: 2rem 0;
+
+  display: grid;
+  grid-template-columns: 1fr 140px;
+  grid-template-rows: repeat(3, 140px) 1fr;
+}
+
+section.collections .left-ad .main-photo,
+section.collections .right-ad .main-photo {
+  background-position: center;
+  background-size: cover;
+
+  grid-row: span 3;
+}
+
+section.collections .left-ad .thumbnail-container,
+section.collections .right-ad .thumbnail-container {
+  display: grid;
+  grid-row: span 3;
+}
+
+
+section.collections .left-ad .big {
+  background-image: url("../images/product1.jpg");
+}
+
+section.collections .right-ad .big {
+  background-image: url("../images/product2.jpg");
+}
+
+section.collections .left-ad .pic,
+section.collections .right-ad .pic {
+  background-position: center;
+  background-size: cover;
+}
+
+section.collections .left-ad .item-1 {
+  background-image: url("../images/thumbnail1_1.jpg");
+}
+
+section.collections .left-ad .item-2 {
+  background-image: url("../images/thumbnail1_2.jpg");
+}
+
+section.collections .left-ad .item-3 {
+  background-image: url("../images/thumbnail1_3.png");
+}
+
+section.collections .right-ad .item-1 {
+  background-image: url("../images/thumbnail2_1.jpg");
+}
+
+section.collections .right-ad .item-2 {
+  background-image: url("../images/thumbnail2_2.jpg");
+}
+
+section.collections .right-ad .item-3 {
+  background-image: url("../images/thumbnail2_3.jpg");
+}
+
+section.collections .description-container {
+  display: grid;
+  grid-column: span 2;
+  grid-template-columns: 1fr 140px;
+  grid-template-rows: repeat(3, 140px);
+}
+
+section.collections .description-container .description {
+  grid-row: span 3;
+}
+
+section.collections .description-container .list-container {
+  grid-row: span 3;
+  display: grid;
+  
+}
