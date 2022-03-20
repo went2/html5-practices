@@ -3,11 +3,6 @@
   box-sizing: border-box;
 }
 
-:root {
-  --card-pic-width: 150px;
-  --card-pic-height: var(--card-pic-width);
-}
-
 body {
   font-family: 'Martel Sans', sans-serif;
   margin: 0;
@@ -110,7 +105,7 @@ a {
 }
 
 section.main-body, footer {
-  border: 1px solid #eee;
+  border-top: 1px solid #eee;
   min-width: 570px;
 }
 
@@ -676,15 +671,15 @@ section.card .title span i {
 section.card .container {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-
+  padding: 0 var(--card-container-padding2);
 }
 
-section.card .container a {
+section.card a {
   display: flex;
   flex-direction: column;
 }
 
-section.card .container .card-pic {
+section.card .card-pic {
   width: var(--card-pic-width);
   height: var(--card-pic-height);
   border-radius: 50%;
@@ -693,36 +688,36 @@ section.card .container .card-pic {
   transition: .5s;
 }
 
-section.card .container .card-title {
+section.card .card-title {
   font-size: 0.9rem;
   text-align: center;
 }
 
-section.card .container .card-item-1 .card-pic {
+section.card .card-item-1 .card-pic {
   background-image: url("../images/098-1.png");
 }
 
-section.card .container .card-item-2 .card-pic {
+section.card .card-item-2 .card-pic {
   background-image: url("../images/098-2.png");
 }
 
-section.card .container .card-item-3 .card-pic {
+section.card .card-item-3 .card-pic {
   background-image: url("../images/098-3.png");
 }
 
-section.card .container .card-item-4 .card-pic {
+section.card .card-item-4 .card-pic {
   background-image: url("../images/098-4.png");
 }
 
-section.card .container .card-item-5 .card-pic {
+section.card .card-item-5 .card-pic {
   background-image: url("../images/098-5.png");
 }
 
-section.card .container .card-item-6 .card-pic {
+section.card .card-item-6 .card-pic {
   background-image: url("../images/098-6.png");
 }
 
-section.card .container .card-item-7 .card-pic {
+section.card .card-item-7 .card-pic {
   background-image: url("../images/098-7.png");
 }
 
@@ -733,4 +728,104 @@ section.card .card-item:hover > .card-pic {
 
 section.card .card-item:hover > .card-title {
   text-decoration: underline;
+}
+
+section.card .second-line.hidden {
+  display: none;
+}
+
+:root {
+  --card-width: 100vw;
+  --card-container-padding2: 20px;
+  
+  --card-grid-gap: 20px;
+  --card-pic-width: 150px;
+  --card-pic-height: var(--card-pic-width);
+}
+
+@media screen and (max-width: 1312px) {
+  section.card {
+    width: var(--card-width);
+    overflow: hidden;
+  }
+  section.card .container {
+    grid-gap: var(--card-grid-gap);
+  }
+
+  /* card item 容器随 viewwidth 宽度变化而变化 */
+  section.card .card-item {
+    width: calc((var(--card-width) - var(--card-container-padding2) * 2 - var(--card-grid-gap) * 6) / 7);
+  }
+
+  section.card .card-pic {
+    width: calc((var(--card-width) - var(--card-container-padding2) * 2 - var(--card-grid-gap) * 6) / 7) !important;
+    height: calc((var(--card-width) - var(--card-container-padding2) * 2 - var(--card-grid-gap) * 6) / 7) !important;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  section.card {
+    --card-width: 98vw;
+  }
+
+  section.card .container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+    "a b c d"
+    "second second second second"
+  }
+
+  section.card .card-item.hidden {
+    display: none;
+  }
+
+  section.card .card-item-1 {
+    grid-area: a;
+  }
+  section.card .card-item-2 {
+    grid-area: b;
+  }
+  section.card .card-item-3 {
+    grid-area: c;
+  }
+  section.card .card-item-4 {
+    grid-area: d;
+  }
+
+  section.card .second-line {
+    grid-area: second;
+  }
+
+  section.card .card-item {
+    width: calc((var(--card-width) - var(--card-container-padding2) * 2 - var(--card-grid-gap) * 3) / 4);
+  }
+
+  section.card .card-pic {
+    width: calc((var(--card-width) - var(--card-container-padding2) * 2 - var(--card-grid-gap) * 3) / 4) !important;
+    height: calc((var(--card-width) - var(--card-container-padding2) * 2 - var(--card-grid-gap) * 3) / 4) !important;
+  }
+
+  section.card .second-line.hidden {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: var(--card-grid-gap);
+    
+    width: 78%;
+    padding-left: calc((var(--card-width) - var(--card-container-padding2) * 2 - var(--card-grid-gap) * 3) / 4 / 2 + 12px);
+  }
+  
+}
+
+footer .container {
+  max-width: 1312px;
+  margin: 0 auto;
+
+  display: flex;
+  padding: 0 3rem;
+  justify-content: flex-end;
+}
+
+footer .container p {
+  color: #555;
+
 }
