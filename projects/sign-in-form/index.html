@@ -12,9 +12,21 @@
     <div class="sign-in-container">
       <h2>Sign In</h2>
       <form action="/" class="sign-in-form">
-        <input type="email">
-        <input type="password">
-        <button type="button" value="">Sign In</button>
+        <div class="input-wrapper">
+          <input type="email" placeholder="Email" class="text-input email">
+          <div class="dynamic-placeholder">
+            <span>Email</span>
+          </div>
+        </div>
+        <div class="input-wrapper">
+          <input type="password" placeholder="Password" class="text-input pwd">
+          <div class="dynamic-placeholder">
+            <span>Password</span>
+          </div>
+        </div>
+        <div class="sign-btn-wrapper">
+          <button type="button" value="" class="sign-btn">Sign In</button>
+        </div>
       </form>
     </div>
   </div>
