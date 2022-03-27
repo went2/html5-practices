@@ -101,8 +101,6 @@ html:
 
 ```
 
-不用 `input` 自带的 `placeholder` 属性。
-
 ### 其他：实现按钮居右
 
 第一种：设置按钮所在的容器设为 `displaye: flex` + `justify-content: flex-end` ：
