@@ -1,0 +1,10 @@
+{
+  /** Easy Sass 插件 **/
+   "easysass.formats": [
+   {
+    "format": "compressed", // 压缩
+    "extension": ".css"
+   }
+  ], 
+  "easysass.targetDir": "./projects/06_airPods-website/scss/" // 自定义css输出文件路径
+}

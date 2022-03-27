@@ -1,0 +1,12 @@
+@import "_variables.scss";
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: $body-font;
+  background-color: $white-color;
+  color: $first-color;
+}
