@@ -55,6 +55,80 @@
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .nav {
+    @include margin-center(auto);
+  }
+}
+
+.home {
+  height: 900px;
+  // margin-top: $header-height;
+  background-color: $bg-color;
+  
+  padding-bottom: 3rem;
+
+  &-content {
+    @include margin-center(auto);
+  }
+
+  &-data {
+    padding-top: 3.5rem;
+    @include text-margin(2rem);
+  }
+
+  &-title {
+    font-size: $biggest-font-size;
+    font-weight: $font-regular;
+  }
+
+  &-description {
+    font-size: $normal-font-size;
+    font-weight: $font-light;
+
+    // 使数字上标所在的行高度不会太高
+    sup {
+      position: relative;
+      top: -0.5rem;
+      vertical-align: baseline;
+      font-size: 0.6em;
+    }
+  }
+
+  &-img {
+    display: flex;
+    justify-content: center;
+    padding-top: 5rem;
+    
+    img {
+      width: 150px;
+      height: 350px;
+      margin-right: 1rem;
+    }
+  }
+}
+
+// animation
+.airpod1 {
+  animation: airpod1 3s infinite;
+
+  @keyframes airpod1 {
+    50% {
+      transform: translateY(-6%)
+    }
+  }
+}
+
+.airpod2 {
+  animation: airpod2 3s infinite;
+
+  @keyframes airpod2 {
+    50% {
+      transform: translateY(6%)
+    }
+  }
+}
+
 @media screen and (min-width: 768px) {
   .nav {
     &-menu {
@@ -69,10 +143,33 @@
       margin-right: 1.5rem;
     }
   }
-}
 
-@media screen and (min-width: 1200px) {
-  .nav {
-    @include margin-center(auto);
+  .home {
+    height: 1600px;
+
+    &-data {
+      padding-top: 8rem;
+    }
+
+    &-title {
+      font-size: $biggest-font-size;
+      font-weight: $font-bold;
+    }
+
+    &-description {
+      font-size: $big-font-size;
+      font-weight: $font-regular;
+      line-height: 2rem;
+    }
+
+    &-img {
+
+      img {
+        object-fit: scale-down;
+        width: 450px;
+        height: 900px;
+      }
+    }
   }
 }
+
