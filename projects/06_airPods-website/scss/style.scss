@@ -33,7 +33,7 @@
 
   &-logo {
     color: $white-color;
-    font-size: $big-font-size;
+    font-size: var(--big-font-size);
     font-weight: $font-light;
   }
 
@@ -78,13 +78,14 @@
   }
 
   &-title {
-    font-size: $biggest-font-size;
+    font-size: var(--biggest-font-size);
     font-weight: $font-regular;
   }
 
   &-description {
-    font-size: $normal-font-size;
-    font-weight: $font-light;
+    font-size: var(--normal-font-size);
+    font-weight: $font-regular;
+    line-height: 1.5rem;
 
     // 使数字上标所在的行高度不会太高
     sup {
@@ -129,6 +130,75 @@
   }
 }
 
+.details {
+  display: grid;
+  grid-template-rows: 1fr min-content min-content;
+  align-items: center;
+  @include text-margin(0);
+  
+  &-data {
+    @extend .home-data;
+  }
+  
+  .data-title {
+    @extend .home-title;
+  }
+
+  .data-description {
+    @extend .home-description;
+  }
+
+  &-content {
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0;
+  }
+
+  &-box {
+    margin-right: 2rem;
+
+    .details-initial {
+      font-size: var(--small-font-size);
+      color: rgba(0, 0, 0, 0.8);
+    }
+
+    .details-title {
+      font-size: var(--biggest-font-size);
+      font-weight: $font-regular;
+      span {
+        font-size: var(--big-font-size);
+        font-weight: $font-medium;
+      }
+    }
+
+    .details-description {
+      font-size: var(--small-font-size);
+      color: rgba(0, 0, 0, 0.8);
+    }
+  }
+
+  &-img {
+    margin-bottom: 5rem;
+    img {
+      width: 150px;
+      position: relative;
+      left: -1rem;
+    }
+  }
+}
+
+.airpods {
+  animation: airpods 3s infinite;
+
+  @keyframes airpods {
+    50% {
+      transform: translateY(-6%)
+    }
+  }
+}
+
+
+// 大屏幕的 media query 设定放在文档最后
 @media screen and (min-width: 768px) {
   .nav {
     &-menu {
@@ -152,12 +222,12 @@
     }
 
     &-title {
-      font-size: $biggest-font-size;
+      font-size: var(--biggest-font-size);
       font-weight: $font-bold;
     }
 
     &-description {
-      font-size: $big-font-size;
+      font-size: var(--big-font-size);
       font-weight: $font-light;
       line-height: 2rem;
     }
@@ -168,6 +238,16 @@
         object-fit: scale-down;
         width: 450px;
         height: 900px;
+      }
+    }
+  }
+
+  .details {
+    &-img {
+      img {
+        width: 550px;
+        position: relative;
+        left: -1rem;
       }
     }
   }
