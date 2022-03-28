@@ -1,3 +1,78 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&isplay=swap');
 
 @import "_settings.scss";
+
+@mixin text-margin($margin: auto) {
+  text-align: center;
+  margin: 0 $margin;
+}
+
+@mixin margin-center($margin-left: auto) {
+  max-width: 1200px;
+  margin: 0 $margin-left;
+}
+
+.fixed-header {
+  width: 100%;
+  background-color: $black-color;
+  opacity: 0.95;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $z-fixed;
+}
+
+.nav {
+  @include text-margin(2rem);
+
+  height: $header-height;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &-logo {
+    color: $white-color;
+    font-size: $big-font-size;
+    font-weight: $font-light;
+  }
+
+  &-menu {
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &-link {
+    color: $white-color;
+  }
+
+  &-btn {
+    background-color: $second-color;
+    border-radius: 1rem;
+    color: $white-color;
+    padding: .375rem 1rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav {
+    &-menu {
+      margin-left: auto;
+    }
+
+    &-list {
+      display: flex;
+    }
+
+    &-item {
+      margin-right: 1.5rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .nav {
+    @include margin-center(auto);
+  }
+}
